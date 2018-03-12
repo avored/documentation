@@ -13,18 +13,36 @@ Module Routes file is the place to defined all the routes for your module. Once 
     });
     
     // Or you can simply use different Request method too.
+    Route::post('auth', 'LoginController@login')->name('admin.login.post');
     
-    Route::post('auth', function() {});
-    
-    Route::put('product', function() {});
+    Route::put('product', 'ProductController@index')->name('admin.product.index');
     
     Route::delete('category', 'CategoryController@destroy')->name('admin.category.destroy');
     
-  ###  Module Route Parameter
+  ### Route Parameter Required
   
   You can specify an Parameter in route url like below
   
+      // Show Profile update form
       Route::get('user/{id}', 'UserController@editProfile')->name('admin.user.edit');
       
-      // Route with Optional Parameter in Url If Id does not exist then it will destroy Current Login Profile to update
-      Route::put('user/{id?}', 'UserController@destory')->name('admin.user.update');
+## Route Optional Parameter
+      
+      //Below route is the one where you can pass user if and if it doesn't exist then you can use Logged In User
+      Route::put('user/{id?}', 'UserController@updateProfile')->name('admin.user.update');
+
+# Use Route into your Blade or other .php Files
+
+When it comes to using an route we always prefer to `name` all the routes so when you want to use the route into any of your PHP files you can simple use `route` helper function
+
+    // Router with out argument
+    route('admin.login'); / yoursite.com/admin/login
+    
+    // Router with  argument
+    route('admin.user.edit',$user->id);  // yoursite.com/admin/user/edit/2
+    
+    // route with pagination argument
+   
+    route('admin.product.index',['page' => 2]);  // yoursite.com/admin/product?page=2
+    
+    
