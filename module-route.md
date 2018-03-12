@@ -42,7 +42,6 @@ When it comes to using an route we always prefer to `name` all the routes so whe
     route('admin.user.edit',$user->id);  // yoursite.com/admin/user/edit/2
     
     // route with pagination argument
-   
     route('admin.product.index',['page' => 2]);  // yoursite.com/admin/product?page=2
     
     
