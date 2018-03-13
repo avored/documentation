@@ -19,19 +19,19 @@ Module Routes file is the place to defined all the routes for your module. Once 
     
     Route::delete('category', 'CategoryController@destroy')->name('admin.category.destroy');
     
-  ### Route Parameter Required
+ ### Route Parameter Required
   
   You can specify an Parameter in route url like below
   
       // Show Profile update form
       Route::get('user/{id}', 'UserController@editProfile')->name('admin.user.edit');
       
-## Route Optional Parameter
+### Route Optional Parameter
       
       //Below route is the one where you can pass user if and if it doesn't exist then you can use Logged In User
       Route::put('user/{id?}', 'UserController@updateProfile')->name('admin.user.update');
 
-# Use Route into your Blade or other .php Files
+### Use Route into your Blade or other .php Files
 
 When it comes to using an route we always prefer to `name` all the routes so when you want to use the route into any of your PHP files you can simple use `route` helper function
 
@@ -45,3 +45,25 @@ When it comes to using an route we always prefer to `name` all the routes so whe
     route('admin.product.index',['page' => 2]);  // yoursite.com/admin/product?page=2
     
     
+### Route Group
+
+Route groups allow you to share route attributes, such as middleware or namespaces, prefix across a large number of routes without needing to define those attributes on each individual route.
+
+##### Middleware
+To assign middleware to all routes within a group, you may use the middleware method before defining the group.Let say you want group of routes to be authenticated you can simply do it with `front.auth` like below:
+
+    Route::middleware('front.auth')->group(function() {
+    
+        Route::get('my-account', 'MyAccountController@index')->name('user.my-account.index');
+        Route::post('my-account', 'MyAccountController@store')->name('user.my-account.store');
+    
+    });
+    
+    //If you want to pass multiple Middleware simply use an array 
+    
+    Route::middleware(['web','front.auth'])->group(function() {
+    
+        Route::get('my-account', 'MyAccountController@index')->name('user.my-account.index');
+        Route::post('my-account', 'MyAccountController@store')->name('user.my-account.store');
+    
+    });
