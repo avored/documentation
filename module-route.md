@@ -67,3 +67,24 @@ To assign middleware to all routes within a group, you may use the middleware me
         Route::post('my-account', 'MyAccountController@store')->name('user.my-account.store');
     
     });
+    
+##### NameSpace
+Another common use-case for route groups is assigning the same PHP namespace to a group of controllers using the namespace method:
+
+    Route::->namespace('AvoRed\Ecommerce\Http\Controllers\Admin')->group(function() {
+    
+        Route::get('admin/product', 'ProductController@index')->name('admin.product.index');
+        Route::post('admin/product', 'ProductController@store')->name('admin.product.store');
+    
+    });
+    
+##### Prefix
+The prefix method may be used to prefix each route in the group with a given URI. For example, you may want to prefix all route URIs within the group with admin:
+
+    Route::->prefix('admin')->group(function() {
+    
+         // Above uri example we don't use `admin/` in this case
+        Route::get('product', 'ProductController@index')->name('admin.product.index');
+        Route::post('product', 'ProductController@store')->name('admin.product.store');
+    
+    });
