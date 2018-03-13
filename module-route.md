@@ -88,3 +88,14 @@ The prefix method may be used to prefix each route in the group with a given URI
         Route::post('product', 'ProductController@store')->name('admin.product.store');
     
     });
+    
+##### Route Name Prefix
+The name method may be used to prefix each route name in the group with a given string. For example, you may want to prefix all of the grouped route's names with admin:
+
+    Route::->name('admin.')->group(function() {
+    
+         // Above uri example we don't use `admin` in this case
+        Route::get('admin/product', 'ProductController@index')->name('product.index');
+        Route::post('admin/product', 'ProductController@store')->name('product.store');
+    
+    });
