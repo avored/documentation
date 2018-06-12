@@ -45,6 +45,10 @@ Alternatively, you may also install Laravel by issuing the Composer `create-proj
 ### Execute the AvoRed Install Command
     
     php artisan avored:install
+
+### Execute the AvoRed Admin Make Command
+    
+    php artisan avored:admin:make
     
 Once you finished the Installation Command for the Admin Access you can just visit
 
