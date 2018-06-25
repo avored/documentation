@@ -36,7 +36,7 @@ AvoRed E commerce utilizes [Composer](https://getcomposer.org) to manage its dep
 
 Alternatively, you may also install Laravel by issuing the Composer `create-project` command in your terminal:
 
-    composer create-project avored/laravel-ecommerce --stability=dev
+    composer create-project --prefer-dist avored/laravel-ecommerce
 
 #### Set up your Envirionment(.env) file
 
