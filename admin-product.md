@@ -36,7 +36,6 @@ Product Edit screen cards:
  - Product Downloadable Info (Only Apprears when your product type is: Downloadable Product)
  - Product Related Product Card(Only Appears if you have related Product module installed!)
 
-
 ###### Product Basic Info Card Snapshot
 
 Basic Product Properties 
@@ -57,6 +56,8 @@ Basic Product Properties
  - Length
 
 <img class="img-fluid img-thumbnail" alt="Edit a product  basic info card into Avored e-commerce" src="https://user-images.githubusercontent.com/4218702/42067636-3f985d9c-7b9b-11e8-98d4-6ff3b8a3b0c9.png">
+
+
 
 
 ###### Product Images Card Snapshot
