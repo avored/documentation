@@ -16,7 +16,7 @@ Fill out the property fields as shown in Image.
  - Field Type 
  - Sort Order
 
-<img width="1102" alt="Create a Product Property into AvoRed Admin" src="https://user-images.githubusercontent.com/4218702/41814943-a2f3dcd4-77b0-11e8-92d6-694be6f8052d.png">
+<img class="img-thumbnail img-fluid"  alt="Create a Product Property into AvoRed Admin" src="https://user-images.githubusercontent.com/4218702/41814943-a2f3dcd4-77b0-11e8-92d6-694be6f8052d.png">
 
 
 
@@ -34,7 +34,7 @@ Just change the field that wanted to changed it.
  - Field Type 
  - Sort Order
  
-<img width="1097" alt="Edit a Product Property into AvoRed Admin" src="https://user-images.githubusercontent.com/4218702/41814926-2c96d7f8-77b0-11e8-9700-eaefb5d0aeb3.png">
+<img class="img-thumbnail img-fluid"  alt="Edit a Product Property into AvoRed Admin" src="https://user-images.githubusercontent.com/4218702/41814926-2c96d7f8-77b0-11e8-9700-eaefb5d0aeb3.png">
 
 
 #### Destroy a property
