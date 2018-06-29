@@ -56,7 +56,7 @@ Basic Product Properties
  - Height
  - Length
 
-<img class="img-fluid img-thumbnail" alt="Edit a product  basic info card into Avored e-commerce" src="https://user-images.githubusercontent.com/4218702/41814909-47327ece-77af-11e8-8b69-1a17c2d8a7af.png">
+<img class="img-fluid img-thumbnail" alt="Edit a product  basic info card into Avored e-commerce" src="https://user-images.githubusercontent.com/4218702/42067636-3f985d9c-7b9b-11e8-98d4-6ff3b8a3b0c9.png">
 
 
 ###### Product Images Card Snapshot
