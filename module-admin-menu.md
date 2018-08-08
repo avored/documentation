@@ -6,18 +6,19 @@
     use AvoRed\Framework\AdminMenu\Facade as AdminMenuFacade;
     use AvoRed\Framework\AdminMenu\AdminMenu;
     
-    
+    // Below Line of code add a top level Menu into an Admin
     AdminMenuFacade::add('promotion')
             ->label('Promotion')
             ->route('#')
             ->icon('fa fa-book');
-
-        $promotionMenu = AdminMenuFacade::get('promotion');
-        
-        $subscribeListMenu = new AdminMenu();
-        $subscribeListMenu->key('subscribe')
+            
+    // Below Line of get the added top level Menu
+    $promotionMenu = AdminMenuFacade::get('promotion');
+    
+    // Below Line of code add a SubMenu of a Promotion Menu        
+    $promotionMenu->subMenu('subscribe',   function(AdminMenu $menu) {
+            $menu->key('subscribe')
             ->label('Subscribe List')
             ->route('admin.subscribe.index')
             ->icon('fab fa-book');
-            
-        $promotionMenu->subMenu('subscribe', $subscribeListMenu);
+        });
