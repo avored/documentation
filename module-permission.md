@@ -6,24 +6,32 @@
     use AvoRed\Framework\Permission\Facade as PermissionFacade;
     
     
-    $permissionGroup = PermissionFacade::add('subscribe')
-            ->label('Subscriber Permissions');
+    use AvoRed\Framework\Permission\PermissionGroup;
+    $permissionGroup = PermissionFacade::add('subscribe', function(PermissionGroup $group){
+            $group->label('Subscriber Permissions');
+        });
 
-        $permissionGroup->addPermission('admin-subscribe-list')
-            ->label('Subscriber List')
-            ->routes('admin.subscribe.index');
-
-        $permissionGroup->addPermission('admin-subscribe-create')
-            ->label('Subscriber Create')
-            ->routes('admin.subscribe.create,admin.subscribe.store');
-
-        $permissionGroup->addPermission('admin-subscribe-update')
-            ->label('Subscriber Update')
-            ->routes('admin.subscribe.edit,admin.subscribe.update');
-
-        $permissionGroup->addPermission('admin-subscribe-destroy')
-            ->label('Subscriber Destroy')
-            ->routes('admin.subscribe.destroy');
-
+    use AvoRed\Framework\Permission\Permission;
+    $permissionGroup->addPermission('admin-subscribe-list', function(Permission $permission) {
+            $permission->label('Subscriber List')
+                ->routes('admin.subscribe.index');
+    });
+    $permissionGroup->addPermission('admin-subscribe-create', function(Permission $permission) {
+        $permission->label('Subscriber Create')
+                ->routes('admin.subscribe.create,admin.subscribe.store');
+    });
+    $permissionGroup->addPermission('admin-subscribe-update', function(Permission $permission) {
+        $permission->label('Subscriber Update')
+                ->routes('admin.subscribe.edit,admin.subscribe.update');
+    });
+    $permissionGroup->addPermission('admin-subscribe-destroy', function(Permission $permission) {
+        $permission->label('Subscriber Destroy')
+                ->routes('admin.subscribe.destroy');
+    });
+    $permissionGroup->addPermission('admin-subscribe-show', function(Permission $permission) {
+        $permission->label('Subscriber Show')
+                ->routes('admin.subscribe.show');
+    });
+        
 
 So as mention above once the permission gets Register with `PermissionFacade` then AvoRed E commerce Administrator can simple go to User Roles menu and manage the permission easily by ticking on checkboxes.
