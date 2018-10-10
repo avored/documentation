@@ -1,24 +1,21 @@
 # Installation
 
-- [Installation](#installation)
-    - [Server Requirements](#server-requirements)
-    - [Installing AvoRed E cimmerce](#installing-avored-ecommerce)
+* [Installation](installation.md#installation)
+  * [Server Requirements](installation.md#server-requirements)
+  * [Installing AvoRed E cimmerce](installation.md#installing-avored-ecommerce)
 
-<a name="installation"></a>
 ## Installation
-> 
-<a name="server-requirements"></a>
-### Server Requirements
+
+> ### Server Requirements
 
 The AvoRed E commerce framework has a few system requirements.
 
 Below is the list which you will need to make sure your server meets the following requirements:
 
-
-* PHP >= 7.1.3
+* PHP &gt;= 7.1.3
 * OpenSSL PHP Extension
 * PDO PHP Extension
-* GD Library (Image Processing)
+* GD Library \(Image Processing\)
 * Mbstring PHP Extension
 * Tokenizer PHP Extension
 * XML PHP Extension
@@ -26,8 +23,6 @@ Below is the list which you will need to make sure your server meets the followi
 * JSON PHP Extension
 * Curl PHP Extension
 
-
-<a name="installing-avored-ecommerce"></a>
 ### Installing AvoRed E commerce
 
 AvoRed E commerce utilizes [Composer](https://getcomposer.org) to manage its dependencies. So, before using AvoRed E commerce, make sure you have Composer installed on your machine.
@@ -36,29 +31,39 @@ AvoRed E commerce utilizes [Composer](https://getcomposer.org) to manage its dep
 
 Alternatively, you may also install Laravel by issuing the Composer `create-project` command in your terminal:
 
-    composer create-project --prefer-dist avored/laravel-ecommerce
+```text
+composer create-project --prefer-dist avored/laravel-ecommerce
+```
 
-#### Set up your Envirionment(.env) file
+#### Set up your Envirionment\(.env\) file
 
-    laravel-ecommerce/.env 
-    
+```text
+laravel-ecommerce/.env 
+```
+
 ### Execute the AvoRed Install Command
-    
-    php artisan avored:install
+
+```text
+php artisan avored:install
+```
 
 ### Execute the AvoRed Admin Make Command
-    
-    php artisan avored:admin:make
-    
+
+```text
+php artisan avored:admin:make
+```
+
 Once you finished the Installation Command for the Admin Access you can just visit
 
-    yoursite.com/admin
-    
+```text
+yoursite.com/admin
+```
+
 That's it!
 
 #### Directory Permissions
 
-After installing AvoRed E commerce, you may need to configure some permissions. Directories within the `storage` and the `public/uploads` directories should be writable by your web server or AvoRed E commerce will not run. 
+After installing AvoRed E commerce, you may need to configure some permissions. Directories within the `storage` and the `public/uploads` directories should be writable by your web server or AvoRed E commerce will not run.
 
 #### Application Key
 
