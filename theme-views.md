@@ -12,7 +12,7 @@ AvoRed
 
 As view is created inside a `themes/company-name/theme-name/views/hello-world.blade.php` inside your controller you can simply use `view("hello-world")`
 
-```text
+```php
 public function helloWorld() {
     return view('hello-world');
 }
@@ -22,7 +22,7 @@ public function helloWorld() {
 
 If you want to Greet a Person with his/her name inside a `hello-world` views you can simply use `with` method as shown below
 
-```text
+```php
 @extends('layouts.app')
 
 @section('meta_title', 'Hello World - AvoRed Shopping Cart')
@@ -44,7 +44,7 @@ If you want to Greet a Person with his/her name inside a `hello-world` views you
 
 If you want to check if the view exists or not before you return view inside you controller you can simply use an `exists` method like below:
 
-```text
+```php
 use Illuminate\Support\Facades\View;
 if (View::exists('hello-world')) {
     return view('hello-world')
