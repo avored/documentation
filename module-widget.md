@@ -2,7 +2,7 @@
 
 `Widget` facade is very helpful for adding an widget for your custom module. Let say you want add a simple widget for your featured product custom module for AvoRed E commerce. You can do that simply adding into your `module.php` files `boot` method by registering a Widget.
 
-```text
+```php
 use AvoRed\Framework\Widget\Facade as WidgetFacade;
 use AvoRed\Featured\Widget\Featured\Widget;
 
@@ -15,7 +15,7 @@ WidgetFacade::make($featuredProduct->identifier(), $featuredProduct);
 
 Only one main thing to keep in mind when creating a Widget class is to use `WidgetContract` for your widget class. Let say we want to implement an Widget Class for a Feature Product. It can be done using an simple way as shown below:
 
-```text
+```php
 <?php
 
 namespace AvoRed\Featured\Widget\Featured;
