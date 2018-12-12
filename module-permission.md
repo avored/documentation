@@ -2,7 +2,7 @@
 
 `Permission` facade is very helpful for adding an permisison for your custom module admin routes. Let say you want add a simple permission for your subscribe user routes into an Admin of AvoRed E commerce. You can do that simply adding into your `module.php` files `boot` method by registering an Permission. Only the thing that needs to be make sure here is you use a routes name property and into your routes makes sure you named all routes as it mention in route docs.
 
-```text
+```php
 use AvoRed\Framework\Permission\Facade as PermissionFacade;
 
 
