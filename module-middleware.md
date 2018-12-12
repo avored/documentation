@@ -19,7 +19,7 @@ There are several middleware included in the AvoRed Ecommerce.
 
   class Module extends ServiceProvider {
 
-  ```text
+  ```php
      /**
       * Bootstrap any application services.
       *
