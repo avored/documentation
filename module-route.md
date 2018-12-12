@@ -2,7 +2,7 @@
 
 Module Routes file is the place to defined all the routes for your module. Once you Register your Route file in `routes/web.php`. Inside your Route file you can use a Clouser if you want like shown below
 
-```text
+```php
 Route::get('hello-world', function() {
     return "Hello World";
 });
@@ -32,7 +32,7 @@ You can specify an Parameter in route url like below
 
 ## Route Optional Parameter
 
-```text
+```php
   //Below route is the one where you can pass user if and if it doesn't exist then you can use Logged In User
   Route::put('user/{id?}', 'UserController@updateProfile')->name('admin.user.update');
 ```
@@ -41,7 +41,7 @@ You can specify an Parameter in route url like below
 
 When it comes to using an route we always prefer to `name` all the routes so when you want to use the route into any of your PHP files you can simple use `route` helper function
 
-```text
+```php
 // Router with out argument
 route('admin.login'); / yoursite.com/admin/login
 
@@ -60,7 +60,7 @@ Route groups allow you to share route attributes, such as middleware or namespac
 
 To assign middleware to all routes within a group, you may use the middleware method before defining the group.Let say you want group of routes to be authenticated you can simply do it with `front.auth` like below:
 
-```text
+```php
 Route::middleware('front.auth')->group(function() {
 
     Route::get('my-account', 'MyAccountController@index')->name('user.my-account.index');
@@ -82,7 +82,7 @@ Route::middleware(['web','front.auth'])->group(function() {
 
 Another common use-case for route groups is assigning the same PHP namespace to a group of controllers using the namespace method:
 
-```text
+```php
 Route::->namespace('AvoRed\Ecommerce\Http\Controllers\Admin')->group(function() {
 
     Route::get('admin/product', 'ProductController@index')->name('admin.product.index');
@@ -95,7 +95,7 @@ Route::->namespace('AvoRed\Ecommerce\Http\Controllers\Admin')->group(function() 
 
 The prefix method may be used to prefix each route in the group with a given URI. For example, you may want to prefix all route URIs within the group with admin:
 
-```text
+```php
 Route::->prefix('admin')->group(function() {
 
      // Above uri example we don't use `admin/` in this case
@@ -109,7 +109,7 @@ Route::->prefix('admin')->group(function() {
 
 The name method may be used to prefix each route name in the group with a given string. For example, you may want to prefix all of the grouped route's names with admin:
 
-```text
+```php
 Route::->name('admin.')
         ->prefix('admin')->group(function() {
 
