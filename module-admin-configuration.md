@@ -2,7 +2,7 @@
 
 `AdminConfiguration` facade is very helpful for adding an configuration for your custom module. Let say you want add a configuration for your shipping module of AvoRed E commerce. You can do that simply adding into your `module.php` files `boot` method by registering an AdminConfiguration.
 
-```text
+```php
 use AvoRed\Framework\AdminConfiguration\Facade as AdminConfigurationFacade;
 
 
