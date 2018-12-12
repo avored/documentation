@@ -36,7 +36,7 @@ namespace: Avored\Helloworld\
 
 Module Source as it name suggest it contains all the `.php` files of your modules. You must have an `Provider.php` file and it should contain `boot` and `register` method where register method contains your module middleware or facade if you have any. `boot` method register your view, routes, database migration and lang paths. Let say if you are creating an helloworld module then your `provider.php` file should look like below.
 
-```text
+```php
 <?php
 namespace Avored\Helloworld;
 
