@@ -6,6 +6,7 @@
 
 ## Installation
 
+<a name="server-requirements"></a>
 > ### Server Requirements
 
 The AvoRed E commerce framework has a few system requirements.
@@ -23,6 +24,7 @@ Below is the list which you will need to make sure your server meets the followi
 * JSON PHP Extension
 * Curl PHP Extension
 
+<a name="installing-avored-ecommerce"></a>
 ### Installing AvoRed E commerce
 
 AvoRed E commerce utilizes [Composer](https://getcomposer.org) to manage its dependencies. So, before using AvoRed E commerce, make sure you have Composer installed on your machine.
