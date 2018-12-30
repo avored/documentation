@@ -2,7 +2,7 @@
 
 * [Installation](#installation)
   * [Server Requirements](#server-requirements)
-  * [Installing AvoRed E cimmerce](#installing-avored-ecommerce)
+  * [Installing AvoRed E commerce](#installing-avored-ecommerce)
 
 ## Installation
 
